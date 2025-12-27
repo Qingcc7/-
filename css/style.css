@@ -1,0 +1,925 @@
+/* 全局样式 - 简洁高级风格 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #1a1a1a;
+    --secondary-color: #666;
+    --accent-color: #000;
+    --bg-color: #ffffff;
+    --bg-light: #fafafa;
+    --text-color: #1a1a1a;
+    --text-light: #666;
+    --border-color: #e5e5e5;
+    --shadow: 0 1px 3px rgba(0,0,0,0.05);
+    --shadow-hover: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--bg-color);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* 导航栏 - 简洁设计 */
+.navbar {
+    background: var(--bg-color);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-brand h1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    padding: 4px 0;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--text-color);
+}
+
+.nav-menu a.active {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-menu a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--text-color);
+}
+
+/* 英雄区域 - 极简设计 */
+.hero {
+    background: var(--bg-light);
+    padding: 120px 20px 80px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero-content h2 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--text-color);
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* 按钮样式 - 简洁高级 */
+.btn {
+    padding: 12px 32px;
+    border: 1px solid var(--text-color);
+    border-radius: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.2s;
+    background: transparent;
+    color: var(--text-color);
+    letter-spacing: 0.02em;
+}
+
+.btn-primary {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.btn-primary:hover {
+    background: var(--text-light);
+    border-color: var(--text-light);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--text-color);
+}
+
+.btn-secondary:hover {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+/* 章节标题 */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 80px 0 48px;
+    color: var(--text-color);
+    letter-spacing: -0.02em;
+}
+
+/* 功能卡片 - 简洁高级 */
+.features {
+    padding: 80px 0;
+    background: var(--bg-color);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin-top: 0;
+}
+
+.feature-card {
+    background: var(--bg-color);
+    padding: 40px 32px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.feature-card:hover {
+    border-color: var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.feature-card h3 {
+    color: var(--text-color);
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* 岩馆网格 */
+.gym-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    margin: 0;
+}
+
+.gym-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.gym-card:hover {
+    border-color: var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.gym-image {
+    width: 100%;
+    height: 240px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gym-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.gym-info {
+    padding: 24px;
+}
+
+.gym-name {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.gym-location {
+    color: var(--text-light);
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gym-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+}
+
+.stars {
+    color: #FFD700;
+    font-size: 0.9rem;
+}
+
+.gym-price {
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* 活动列表 */
+.event-list {
+    display: grid;
+    gap: 24px;
+    margin: 0;
+}
+
+.event-card {
+    background: var(--bg-color);
+    padding: 32px;
+    border: 1px solid var(--border-color);
+    display: flex;
+    gap: 24px;
+    transition: all 0.2s;
+}
+
+.event-card:hover {
+    border-color: var(--text-color);
+    transform: translateX(4px);
+}
+
+.event-date {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 20px 16px;
+    text-align: center;
+    min-width: 80px;
+    height: fit-content;
+}
+
+.event-date .day {
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+}
+
+.event-date .month {
+    font-size: 0.85rem;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.event-content {
+    flex: 1;
+}
+
+.event-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.event-description {
+    color: var(--text-light);
+    margin-bottom: 12px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.event-meta {
+    display: flex;
+    gap: 16px;
+    color: var(--text-light);
+    font-size: 0.85rem;
+}
+
+/* 页脚 */
+.footer {
+    background: var(--bg-light);
+    color: var(--text-light);
+    text-align: center;
+    padding: 48px 0;
+    margin-top: 80px;
+    border-top: 1px solid var(--border-color);
+    font-size: 0.85rem;
+}
+
+/* 页面特定样式 */
+.page-header {
+    background: var(--bg-light);
+    color: var(--text-color);
+    padding: 80px 0 60px;
+    text-align: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.page-header p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.page-content {
+    padding: 60px 0;
+    background: var(--bg-color);
+}
+
+/* 表单样式 */
+.form-group {
+    margin-bottom: 24px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: var(--text-color);
+}
+
+/* 卡片列表 */
+.card-list {
+    display: grid;
+    gap: 24px;
+    margin: 0;
+}
+
+.card {
+    background: var(--bg-color);
+    padding: 32px;
+    border: 1px solid var(--border-color);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: -0.01em;
+}
+
+/* 标签 */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    color: var(--text-light);
+}
+
+.tag-primary {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.tag-secondary {
+    background: var(--bg-light);
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .feature-grid,
+    .gym-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+        flex-direction: column;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+}
+
+/* 加载动画 */
+.loading {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.spinner {
+    border: 2px solid var(--border-color);
+    border-top: 2px solid var(--text-color);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 评价样式 */
+.review {
+    background: var(--bg-color);
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 16px;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.review-author {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.review-rating {
+    color: #FFD700;
+}
+
+.review-text {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* 进度条 */
+.progress-bar {
+    width: 100%;
+    height: 24px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    margin: 16px 0;
+}
+
+.progress-fill {
+    height: 100%;
+    background: var(--text-color);
+    transition: width 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+/* 设施列表 */
+.facilities-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.facility-item {
+    background: var(--bg-light);
+    padding: 6px 12px;
+    border: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* 课程卡片 */
+.course-card {
+    background: var(--bg-color);
+    padding: 32px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.course-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 24px;
+}
+
+.course-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+    letter-spacing: -0.01em;
+}
+
+.course-level {
+    padding: 4px 12px;
+    border: 1px solid var(--border-color);
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.level-beginner {
+    background: var(--bg-light);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+.level-intermediate {
+    background: var(--bg-light);
+    color: var(--text-color);
+    border-color: var(--text-color);
+}
+
+.level-advanced {
+    background: var(--text-color);
+    color: var(--bg-color);
+    border-color: var(--text-color);
+}
+
+.instructor-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0;
+    padding: 20px;
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+}
+
+.instructor-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--bg-color);
+    flex-shrink: 0;
+}
+
+/* 社交帖子 */
+.post-card {
+    background: var(--bg-color);
+    padding: 32px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 24px;
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.post-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-color);
+    font-weight: 500;
+    flex-shrink: 0;
+}
+
+.post-content {
+    margin: 16px 0;
+    color: var(--text-light);
+    line-height: 1.8;
+    font-size: 0.95rem;
+}
+
+.post-actions {
+    display: flex;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+}
+
+.post-action {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: color 0.2s;
+    font-size: 0.9rem;
+}
+
+.post-action:hover {
+    color: var(--text-color);
+}
+
+/* 装备卡片 */
+.equipment-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.equipment-card:hover {
+    border-color: var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.equipment-image {
+    width: 100%;
+    height: 240px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    overflow: hidden;
+}
+
+.equipment-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipment-info {
+    padding: 24px;
+}
+
+.equipment-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.equipment-price {
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+/* 新闻卡片 */
+.news-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.news-card:hover {
+    border-color: var(--text-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    background: var(--bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    overflow: hidden;
+}
+
+.news-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 24px;
+}
+
+.news-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: var(--text-color);
+}
+
+.news-date {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+}
+
+.news-excerpt {
+    color: var(--text-light);
+    line-height: 1.6;
+    font-size: 0.9rem;
+}
+
+/* 筛选器 */
+.filter-bar {
+    background: var(--bg-color);
+    padding: 24px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 32px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.filter-group label {
+    font-weight: 400;
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+.filter-group select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 0;
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-size: 0.9rem;
+}
+
+/* 视频容器 */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    margin: 24px 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* 文章内容 */
+.article-content {
+    background: var(--bg-color);
+    padding: 40px;
+    border: 1px solid var(--border-color);
+    line-height: 1.8;
+    color: var(--text-light);
+}
+
+.article-content h2 {
+    color: var(--text-color);
+    margin: 32px 0 16px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.article-content h3 {
+    color: var(--text-color);
+    margin: 24px 0 12px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.article-content ul,
+.article-content ol {
+    margin: 16px 0;
+    padding-left: 24px;
+}
+
+.article-content li {
+    margin: 8px 0;
+}
+
+/* 热门岩馆和最新活动区域 */
+.popular-gyms,
+.latest-events {
+    padding: 80px 0;
+    background: var(--bg-light);
+    border-top: 1px solid var(--border-color);
+}
