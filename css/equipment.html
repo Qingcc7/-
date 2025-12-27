@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>装备推荐 - 攀岩社区</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🧗 攀岩社区</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gyms.html">岩馆</a></li>
+                <li><a href="courses.html">课程</a></li>
+                <li><a href="social.html">社区</a></li>
+                <li><a href="women-events.html">女性活动</a></li>
+                <li><a href="safety.html">安全知识</a></li>
+                <li><a href="progress.html">我的进度</a></li>
+                <li><a href="equipment.html" class="active">装备</a></li>
+                <li><a href="news.html">新闻</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>攀岩装备推荐</h1>
+            <p>关于攀岩装备的建议、推荐和购买链接，协助选择合适的装备</p>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <div class="container">
+            <!-- 装备分类 -->
+            <div style="display: flex; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                <button class="btn btn-primary" onclick="filterEquipment('all')">全部</button>
+                <button class="btn btn-secondary" onclick="filterEquipment('shoes')">攀岩鞋</button>
+                <button class="btn-secondary" onclick="filterEquipment('harness')">安全带</button>
+                <button class="btn-secondary" onclick="filterEquipment('chalk')">镁粉</button>
+                <button class="btn-secondary" onclick="filterEquipment('rope')">绳索</button>
+                <button class="btn-secondary" onclick="filterEquipment('other')">其他</button>
+            </div>
+
+            <!-- 装备列表 -->
+            <div class="gym-grid" id="equipmentList">
+                <!-- 动态加载 -->
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 攀岩社区. 记录每一次攀登的精彩瞬间</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/equipment.js"></script>
+</body>
+</html>
+

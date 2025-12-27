@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>岩馆详情 - 攀岩社区</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>🧗 攀岩社区</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="gyms.html">岩馆</a></li>
+                <li><a href="courses.html">课程</a></li>
+                <li><a href="social.html">社区</a></li>
+                <li><a href="women-events.html">女性活动</a></li>
+                <li><a href="safety.html">安全知识</a></li>
+                <li><a href="progress.html">我的进度</a></li>
+                <li><a href="equipment.html">装备</a></li>
+                <li><a href="news.html">新闻</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-content">
+        <div class="container">
+            <div id="gymDetail">
+                <div class="loading"><div class="spinner"></div></div>
+            </div>
+
+            <!-- 用户评价 -->
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header">
+                    <h2 class="card-title">用户评价</h2>
+                </div>
+                <div id="reviewsList">
+                    <!-- 动态加载 -->
+                </div>
+                <div style="padding: 1rem;">
+                    <h3 style="margin-bottom: 1rem;">添加评价</h3>
+                    <form id="reviewForm">
+                        <div class="form-group">
+                            <label>评分：</label>
+                            <select id="reviewRating" required>
+                                <option value="5">5星</option>
+                                <option value="4">4星</option>
+                                <option value="3">3星</option>
+                                <option value="2">2星</option>
+                                <option value="1">1星</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>评价内容：</label>
+                            <textarea id="reviewText" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">提交评价</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 攀岩社区. 记录每一次攀登的精彩瞬间</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/gym-detail.js"></script>
+</body>
+</html>
+

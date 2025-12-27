@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>攀岩社区 - 记录你的攀岩之旅</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>攀岩社区</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active">首页</a></li>
+                <li><a href="gyms.html">岩馆</a></li>
+                <li><a href="courses.html">课程</a></li>
+                <li><a href="social.html">社区</a></li>
+                <li><a href="women-events.html">女性活动</a></li>
+                <li><a href="safety.html">安全知识</a></li>
+                <li><a href="progress.html">我的进度</a></li>
+                <li><a href="equipment.html">装备</a></li>
+                <li><a href="news.html">新闻</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>记录每一次攀登</h2>
+            <p>发现岩馆 · 寻找伙伴 · 提升技能</p>
+            <div class="hero-buttons">
+                <a href="gyms.html" class="btn btn-primary">探索岩馆</a>
+                <a href="social.html" class="btn btn-secondary">加入社区</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 功能卡片 -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">功能</h2>
+            <div class="feature-grid">
+                <div class="feature-card" onclick="location.href='gyms.html'">
+                    <div class="feature-icon">🏢</div>
+                    <h3>岩馆</h3>
+                    <p>查找岩馆信息、价格和评价</p>
+                </div>
+                <div class="feature-card" onclick="location.href='courses.html'">
+                    <div class="feature-icon">📚</div>
+                    <h3>课程</h3>
+                    <p>攀岩课程和教练信息</p>
+                </div>
+                <div class="feature-card" onclick="location.href='social.html'">
+                    <div class="feature-icon">👥</div>
+                    <h3>社区</h3>
+                    <p>发布活动、寻找伙伴</p>
+                </div>
+                <div class="feature-card" onclick="location.href='women-events.html'">
+                    <div class="feature-icon">💪</div>
+                    <h3>女性活动</h3>
+                    <p>女性专属活动和训练营</p>
+                </div>
+                <div class="feature-card" onclick="location.href='safety.html'">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>安全知识</h3>
+                    <p>技巧和安全指南</p>
+                </div>
+                <div class="feature-card" onclick="location.href='progress.html'">
+                    <div class="feature-icon">📊</div>
+                    <h3>进度</h3>
+                    <p>记录成绩和目标</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 热门岩馆预览 -->
+    <section class="popular-gyms">
+        <div class="container">
+            <h2 class="section-title">热门岩馆</h2>
+            <div class="gym-grid" id="popularGyms">
+                <!-- 动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 最新活动 -->
+    <section class="latest-events">
+        <div class="container">
+            <h2 class="section-title">最新活动</h2>
+            <div class="event-list" id="latestEvents">
+                <!-- 动态加载 -->
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 攀岩社区. 记录每一次攀登的精彩瞬间</p>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
+
